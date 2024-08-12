@@ -11,7 +11,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/lib/apt \
     mkdir -p /out \
  && rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache \
  && apt update \
- && apt-get install --no-install-recommends -y meson ninja-build build-essential pkg-config libglib2.0-dev libexpat1-dev libtiff-dev liblcms2-dev libspng-dev libhwy-dev libwebp-dev libopenjp2-7-dev libjxl-dev libjpeg-turbo8-dev fftw-dev libheif-dev libheif-plugin-libde265 libheif-plugin-dav1d \
+ && apt-get install --no-install-recommends -y meson ninja-build build-essential pkg-config libglib2.0-dev libexpat1-dev libtiff-dev liblcms2-dev libspng-dev libhwy-dev libwebp-dev libopenjp2-7-dev libjxl-dev libjpeg-turbo8-dev libfftw3-dev libheif-dev libheif-plugin-libde265 libheif-plugin-dav1d \
                                                yasm libdav1d-dev
 
 RUN mkdir /vips \
