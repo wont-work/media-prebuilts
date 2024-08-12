@@ -1,6 +1,6 @@
 # syntax = docker.io/docker/dockerfile:1
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0-noble AS media-libs-build
+FROM ubuntu:noble AS media-libs-build
 ARG TARGETARCH
 
 ADD https://github.com/libvips/libvips/releases/download/v8.15.2/vips-8.15.2.tar.xz /vips.tar.xz
